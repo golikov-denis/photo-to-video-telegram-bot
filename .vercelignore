@@ -1,0 +1,15 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local runtime and build data
+.vercel/
+.data/
+.next/
+node_modules/
+coverage/
+*.log
+*.tsbuildinfo

@@ -1,0 +1,50 @@
+{
+  "name": "photo-to-video-telegram-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Telegram bot for animating photos with Kling 4.0 Flash via Kling or Runway API",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:migrate": "node --env-file=.env scripts/migrate.mjs",
+    "telegram:webhook": "node --env-file=.env scripts/telegram-webhook.mjs set",
+    "telegram:webhook:info": "node --env-file=.env scripts/telegram-webhook.mjs info",
+    "telegram:webhook:delete": "node --env-file=.env scripts/telegram-webhook.mjs delete",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "@runwayml/sdk": "4.27.0",
+    "@vercel/blob": "2.9.0",
+    "@vercel/functions": "3.11.2",
+    "grammy": "1.46.0",
+    "next": "16.4.6",
+    "postgres": "4.1.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "^4.6.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "16.4.6",
+    "typescript": "^5.9.3",
+    "vitest": "5.1.0"
+  },
+  "overrides": {
+    "zod": "^4.6.6",
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^11.0.1"
+    }
+  }
+}
