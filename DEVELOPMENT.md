@@ -2,6 +2,8 @@
 
 ## Production
 
+- Приватный репозиторий: `https://github.com/golikov-denis/photo-to-video-telegram-bot`
+- Основная ветка: `main`; каждый push в неё запускает production deployment Vercel.
 - Next.js: `https://22-08-59-afecda10.vercel.app`
 - Видеопровайдер: официальный Kling API, `VIDEO_PROVIDER=kling`.
 - База данных: Neon PostgreSQL.
